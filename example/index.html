@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+</head>
+
+<style>
+    .echarts {
+        padding: 0px;
+        height: 300px;
+        border: dashed 1px darkblue;
+    }
+</style>
+<body>
+
+<div id="app"></div>
+<script type="text/rgl" id="appTpl">
+
+    <div class="container">
+        <button on-click="{isShow = !isShow}">开关</button>
+        <button on-click="{this.remove()}">销毁</button>
+        <button on-click={this.theme()}>主题</button>
+        <button on-click={this.reset()}>重置</button>
+    </div>
+    <hr>
+    <div class="container" r-hide="isShow">
+        <div class="row">
+            <chart ref="c1" option="{option}" config="{config}" class="col-md-5 echarts"></chart>
+            <chart ref="c2" option="{option2}" config="{config2}" class="col-md-5 col-md-offset-2 echarts"></chart>
+        </div>
+    </div>
+
+</script>
+<script src="../node_modules/regularjs/dist/regular.js"></script>
+<script src="../node_modules/echarts/dist/echarts.js"></script>
+<script src="../node_modules/lodash/lodash.js"></script>
+<script src="../dist/rg-echarts.js"></script>
+<script src="./app.js"></script>
+</body>
+</html>
