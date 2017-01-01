@@ -1,6 +1,6 @@
 ### rg-echarts
 
->  :tiger: Regularjs + Echarts 
+>  :chicken: Regularjs + Echarts 
 
 #### 依赖环境
 
